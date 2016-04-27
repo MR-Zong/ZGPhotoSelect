@@ -54,9 +54,21 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:MYQ_Default_Navi_Bar_Background] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)setupViews
 {
-    self.navigationItem.title = @"相机胶卷";
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.text = @"相机胶卷";
+    titleLabel.textColor = [UIColor whiteColor];
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
+    
     [self setupRightBarButton];
     [self setupCollectionView];
     [self setupBottomBarView];
@@ -75,7 +87,7 @@
 - (void)setupCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64 - 44) collectionViewLayout:flowLayout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) collectionViewLayout:flowLayout];
     self.collectionView = collectionView;
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.dataSource = self;

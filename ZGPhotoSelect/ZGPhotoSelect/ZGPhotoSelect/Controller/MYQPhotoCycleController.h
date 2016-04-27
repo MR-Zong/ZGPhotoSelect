@@ -10,7 +10,6 @@
 
 #import "MYQPhotosSelectViewController.h"
 
-#define RGBA(r,g,b,a) ([UIColor colorWithRed:(r) green:(g) blue:(b) alpha:(a)])
 //颜色
 #define MYQ_Default_Cell_Background     RGBA(0x26, 0x26, 0x26, 1) //cell背景色
 #define MYQ_Default_Navi_Bar_Background RGBA(0x30, 0x30, 0x30, 1) //导航条背景色

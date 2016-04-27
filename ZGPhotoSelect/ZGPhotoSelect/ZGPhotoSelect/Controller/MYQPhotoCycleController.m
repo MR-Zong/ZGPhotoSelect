@@ -10,6 +10,7 @@
 #import "MYQPhotosSelectViewController.h"
 #import "MYQAlassetLibraryManager.h"
 #import "UIImage+DHUtil.h"
+#import "UIColor+DHUtil.h"
 
 @interface MYQPhotoCycleCell () <UIScrollViewDelegate>
 
@@ -114,7 +115,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 
 - (void)initialize
 {
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:[[UIColor colorWithRed:0x30 green:0x30 blue:0x30 alpha:1] colorWithAlphaComponent:0.8]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:[MYQ_Default_Navi_Bar_Background colorWithAlphaComponent:0.8]] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)setupBackBarButton
@@ -172,9 +173,9 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 {
     UIView *bottomBarView = [[UIView alloc] init];
     self.bottomBarView = bottomBarView;
-    bottomBarView.backgroundColor = [[UIColor colorWithRed:0x30 green:0x30 blue:0x30 alpha:1] colorWithAlphaComponent:0.8];
+    bottomBarView.backgroundColor = [MYQ_Default_Navi_Bar_Background colorWithAlphaComponent:0.8];
     // 这里的 44*2 是跟上面collectionView的frame.y = -44有关的，不要随便模仿
-    bottomBarView.frame = CGRectMake(0, self.view.bounds.size.height - 44 * 2, self.view.bounds.size.width, 44);
+    bottomBarView.frame = CGRectMake(0, self.view.bounds.size.height - 44, self.view.bounds.size.width, 44);
     [self.view addSubview:bottomBarView];
     
     UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -309,7 +310,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
             title = [NSString stringWithFormat:@"下一步(%zd/%zd)",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
         }
         [self.sendButton setTitle:title forState:UIControlStateNormal];
-        [self.sendButton setTitleColor:[UIColor colorWithRed:0x58 green:0x9b blue:0xda alpha:1] forState:UIControlStateNormal];
+        [self.sendButton setTitleColor:MYQ_Default_Tint_Colot forState:UIControlStateNormal];
 
     }else {
         self.sendButton.enabled = NO;

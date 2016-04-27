@@ -19,10 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     UIButton *exampleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [exampleButton setTitle:@"照片-样例" forState:UIControlStateNormal];
-    exampleButton.frame = CGRectMake(100, 200, 100, 24);
-    exampleButton.backgroundColor = [UIColor yellowColor];
+    exampleButton.frame = CGRectMake(140, 200, 100, 100);
+    exampleButton.backgroundColor = [UIColor blackColor];
     [exampleButton addTarget:self action:@selector(exampleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:exampleButton];
 }
@@ -32,7 +33,8 @@
 - (void)exampleButtonClick:(UIButton *)btn
 {
     MYQPhotosSelectViewController *photoSelectVC = [[MYQPhotosSelectViewController alloc] init];
-    [self presentViewController:photoSelectVC animated:YES completion:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:photoSelectVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 
