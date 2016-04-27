@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF00F09D1CCEFBA0001F26AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F09C1CCEFBA0001F26AD /* main.m */; };
+		EF00F0A01CCEFBA0001F26AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F09F1CCEFBA0001F26AD /* AppDelegate.m */; };
+		EF00F0A31CCEFBA0001F26AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0A21CCEFBA0001F26AD /* ViewController.m */; };
+		EF00F0A61CCEFBA0001F26AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF00F0A41CCEFBA0001F26AD /* Main.storyboard */; };
+		EF00F0A81CCEFBA0001F26AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF00F0A71CCEFBA0001F26AD /* Assets.xcassets */; };
+		EF00F0AB1CCEFBA0001F26AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF00F0A91CCEFBA0001F26AD /* LaunchScreen.storyboard */; };
+		EF00F0B61CCEFBA0001F26AD /* ZGPhotoSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0B51CCEFBA0001F26AD /* ZGPhotoSelectTests.m */; };
+		EF00F0C11CCEFBA0001F26AD /* ZGPhotoSelectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0C01CCEFBA0001F26AD /* ZGPhotoSelectUITests.m */; };
+		EF00F0D61CCEFC2D001F26AD /* MYQPhotoCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D31CCEFC2D001F26AD /* MYQPhotoCycleController.m */; };
+		EF00F0D71CCEFC2D001F26AD /* MYQPhotosSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D51CCEFC2D001F26AD /* MYQPhotosSelectViewController.m */; };
+		EF00F0DA1CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D91CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m */; };
+		EF00F0DD1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0DC1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m */; };
+		EF00F0E11CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0DF1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m */; };
+		EF00F0E21CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF00F0E01CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib */; };
+		EF00F0E61CCEFDD5001F26AD /* UIColor+DHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */; };
+		EF00F0E91CCF00C6001F26AD /* UIImage+DHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF00F0B21CCEFBA0001F26AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF00F0901CCEFB9F001F26AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF00F0971CCEFB9F001F26AD;
+			remoteInfo = ZGPhotoSelect;
+		};
+		EF00F0BD1CCEFBA0001F26AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF00F0901CCEFB9F001F26AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF00F0971CCEFB9F001F26AD;
+			remoteInfo = ZGPhotoSelect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF00F0981CCEFB9F001F26AD /* ZGPhotoSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGPhotoSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF00F09C1CCEFBA0001F26AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF00F09E1CCEFBA0001F26AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF00F09F1CCEFBA0001F26AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF00F0A11CCEFBA0001F26AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF00F0A21CCEFBA0001F26AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF00F0A51CCEFBA0001F26AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF00F0A71CCEFBA0001F26AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF00F0AA1CCEFBA0001F26AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF00F0AC1CCEFBA0001F26AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF00F0B11CCEFBA0001F26AD /* ZGPhotoSelectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGPhotoSelectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF00F0B51CCEFBA0001F26AD /* ZGPhotoSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoSelectTests.m; sourceTree = "<group>"; };
+		EF00F0B71CCEFBA0001F26AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF00F0BC1CCEFBA0001F26AD /* ZGPhotoSelectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGPhotoSelectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF00F0C01CCEFBA0001F26AD /* ZGPhotoSelectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoSelectUITests.m; sourceTree = "<group>"; };
+		EF00F0C21CCEFBA0001F26AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF00F0D21CCEFC2D001F26AD /* MYQPhotoCycleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQPhotoCycleController.h; sourceTree = "<group>"; };
+		EF00F0D31CCEFC2D001F26AD /* MYQPhotoCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQPhotoCycleController.m; sourceTree = "<group>"; };
+		EF00F0D41CCEFC2D001F26AD /* MYQPhotosSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQPhotosSelectViewController.h; sourceTree = "<group>"; };
+		EF00F0D51CCEFC2D001F26AD /* MYQPhotosSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQPhotosSelectViewController.m; sourceTree = "<group>"; };
+		EF00F0D81CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		EF00F0D91CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		EF00F0DB1CCEFCEA001F26AD /* MYQAlassetLibraryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQAlassetLibraryManager.h; sourceTree = "<group>"; };
+		EF00F0DC1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQAlassetLibraryManager.m; sourceTree = "<group>"; };
+		EF00F0DE1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQPictureRedPacketSetMoneyViewController.h; sourceTree = "<group>"; };
+		EF00F0DF1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQPictureRedPacketSetMoneyViewController.m; sourceTree = "<group>"; };
+		EF00F0E01CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYQPictureRedPacketSetMoneyViewController.xib; sourceTree = "<group>"; };
+		EF00F0E41CCEFDD5001F26AD /* UIColor+DHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DHUtil.h"; sourceTree = "<group>"; };
+		EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DHUtil.m"; sourceTree = "<group>"; };
+		EF00F0E71CCF00C6001F26AD /* UIImage+DHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DHUtil.h"; sourceTree = "<group>"; };
+		EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DHUtil.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF00F0951CCEFB9F001F26AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF00F0AE1CCEFBA0001F26AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF00F0B91CCEFBA0001F26AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF00F08F1CCEFB9F001F26AD = {
+			isa = PBXGroup;
+			children = (
+				EF00F09A1CCEFBA0001F26AD /* ZGPhotoSelect */,
+				EF00F0B41CCEFBA0001F26AD /* ZGPhotoSelectTests */,
+				EF00F0BF1CCEFBA0001F26AD /* ZGPhotoSelectUITests */,
+				EF00F0991CCEFB9F001F26AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF00F0991CCEFB9F001F26AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0981CCEFB9F001F26AD /* ZGPhotoSelect.app */,
+				EF00F0B11CCEFBA0001F26AD /* ZGPhotoSelectTests.xctest */,
+				EF00F0BC1CCEFBA0001F26AD /* ZGPhotoSelectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF00F09A1CCEFBA0001F26AD /* ZGPhotoSelect */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0CE1CCEFBCD001F26AD /* ZGPhotoSelect */,
+				EF00F09E1CCEFBA0001F26AD /* AppDelegate.h */,
+				EF00F09F1CCEFBA0001F26AD /* AppDelegate.m */,
+				EF00F0A11CCEFBA0001F26AD /* ViewController.h */,
+				EF00F0A21CCEFBA0001F26AD /* ViewController.m */,
+				EF00F0A41CCEFBA0001F26AD /* Main.storyboard */,
+				EF00F0A71CCEFBA0001F26AD /* Assets.xcassets */,
+				EF00F0A91CCEFBA0001F26AD /* LaunchScreen.storyboard */,
+				EF00F0AC1CCEFBA0001F26AD /* Info.plist */,
+				EF00F09B1CCEFBA0001F26AD /* Supporting Files */,
+			);
+			path = ZGPhotoSelect;
+			sourceTree = "<group>";
+		};
+		EF00F09B1CCEFBA0001F26AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F09C1CCEFBA0001F26AD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF00F0B41CCEFBA0001F26AD /* ZGPhotoSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0B51CCEFBA0001F26AD /* ZGPhotoSelectTests.m */,
+				EF00F0B71CCEFBA0001F26AD /* Info.plist */,
+			);
+			path = ZGPhotoSelectTests;
+			sourceTree = "<group>";
+		};
+		EF00F0BF1CCEFBA0001F26AD /* ZGPhotoSelectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0C01CCEFBA0001F26AD /* ZGPhotoSelectUITests.m */,
+				EF00F0C21CCEFBA0001F26AD /* Info.plist */,
+			);
+			path = ZGPhotoSelectUITests;
+			sourceTree = "<group>";
+		};
+		EF00F0CE1CCEFBCD001F26AD /* ZGPhotoSelect */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0E31CCEFDAD001F26AD /* Category */,
+				EF00F0CF1CCEFBCD001F26AD /* Controller */,
+				EF00F0D01CCEFBCD001F26AD /* Model */,
+				EF00F0D11CCEFBCD001F26AD /* View */,
+			);
+			path = ZGPhotoSelect;
+			sourceTree = "<group>";
+		};
+		EF00F0CF1CCEFBCD001F26AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0D21CCEFC2D001F26AD /* MYQPhotoCycleController.h */,
+				EF00F0D31CCEFC2D001F26AD /* MYQPhotoCycleController.m */,
+				EF00F0D41CCEFC2D001F26AD /* MYQPhotosSelectViewController.h */,
+				EF00F0D51CCEFC2D001F26AD /* MYQPhotosSelectViewController.m */,
+				EF00F0DE1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.h */,
+				EF00F0DF1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m */,
+				EF00F0E01CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF00F0D01CCEFBCD001F26AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0DB1CCEFCEA001F26AD /* MYQAlassetLibraryManager.h */,
+				EF00F0DC1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF00F0D11CCEFBCD001F26AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0D81CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.h */,
+				EF00F0D91CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF00F0E31CCEFDAD001F26AD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EF00F0E41CCEFDD5001F26AD /* UIColor+DHUtil.h */,
+				EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */,
+				EF00F0E71CCF00C6001F26AD /* UIImage+DHUtil.h */,
+				EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF00F0971CCEFB9F001F26AD /* ZGPhotoSelect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF00F0C51CCEFBA0001F26AD /* Build configuration list for PBXNativeTarget "ZGPhotoSelect" */;
+			buildPhases = (
+				EF00F0941CCEFB9F001F26AD /* Sources */,
+				EF00F0951CCEFB9F001F26AD /* Frameworks */,
+				EF00F0961CCEFB9F001F26AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZGPhotoSelect;
+			productName = ZGPhotoSelect;
+			productReference = EF00F0981CCEFB9F001F26AD /* ZGPhotoSelect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF00F0B01CCEFBA0001F26AD /* ZGPhotoSelectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF00F0C81CCEFBA0001F26AD /* Build configuration list for PBXNativeTarget "ZGPhotoSelectTests" */;
+			buildPhases = (
+				EF00F0AD1CCEFBA0001F26AD /* Sources */,
+				EF00F0AE1CCEFBA0001F26AD /* Frameworks */,
+				EF00F0AF1CCEFBA0001F26AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF00F0B31CCEFBA0001F26AD /* PBXTargetDependency */,
+			);
+			name = ZGPhotoSelectTests;
+			productName = ZGPhotoSelectTests;
+			productReference = EF00F0B11CCEFBA0001F26AD /* ZGPhotoSelectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF00F0BB1CCEFBA0001F26AD /* ZGPhotoSelectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF00F0CB1CCEFBA0001F26AD /* Build configuration list for PBXNativeTarget "ZGPhotoSelectUITests" */;
+			buildPhases = (
+				EF00F0B81CCEFBA0001F26AD /* Sources */,
+				EF00F0B91CCEFBA0001F26AD /* Frameworks */,
+				EF00F0BA1CCEFBA0001F26AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF00F0BE1CCEFBA0001F26AD /* PBXTargetDependency */,
+			);
+			name = ZGPhotoSelectUITests;
+			productName = ZGPhotoSelectUITests;
+			productReference = EF00F0BC1CCEFBA0001F26AD /* ZGPhotoSelectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF00F0901CCEFB9F001F26AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Zong;
+				TargetAttributes = {
+					EF00F0971CCEFB9F001F26AD = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					EF00F0B01CCEFBA0001F26AD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = EF00F0971CCEFB9F001F26AD;
+					};
+					EF00F0BB1CCEFBA0001F26AD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = EF00F0971CCEFB9F001F26AD;
+					};
+				};
+			};
+			buildConfigurationList = EF00F0931CCEFB9F001F26AD /* Build configuration list for PBXProject "ZGPhotoSelect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF00F08F1CCEFB9F001F26AD;
+			productRefGroup = EF00F0991CCEFB9F001F26AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF00F0971CCEFB9F001F26AD /* ZGPhotoSelect */,
+				EF00F0B01CCEFBA0001F26AD /* ZGPhotoSelectTests */,
+				EF00F0BB1CCEFBA0001F26AD /* ZGPhotoSelectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF00F0961CCEFB9F001F26AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF00F0AB1CCEFBA0001F26AD /* LaunchScreen.storyboard in Resources */,
+				EF00F0A81CCEFBA0001F26AD /* Assets.xcassets in Resources */,
+				EF00F0A61CCEFBA0001F26AD /* Main.storyboard in Resources */,
+				EF00F0E21CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF00F0AF1CCEFBA0001F26AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF00F0BA1CCEFBA0001F26AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF00F0941CCEFB9F001F26AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF00F0A31CCEFBA0001F26AD /* ViewController.m in Sources */,
+				EF00F0E91CCF00C6001F26AD /* UIImage+DHUtil.m in Sources */,
+				EF00F0D61CCEFC2D001F26AD /* MYQPhotoCycleController.m in Sources */,
+				EF00F0A01CCEFBA0001F26AD /* AppDelegate.m in Sources */,
+				EF00F0DA1CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m in Sources */,
+				EF00F0D71CCEFC2D001F26AD /* MYQPhotosSelectViewController.m in Sources */,
+				EF00F09D1CCEFBA0001F26AD /* main.m in Sources */,
+				EF00F0DD1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m in Sources */,
+				EF00F0E61CCEFDD5001F26AD /* UIColor+DHUtil.m in Sources */,
+				EF00F0E11CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF00F0AD1CCEFBA0001F26AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF00F0B61CCEFBA0001F26AD /* ZGPhotoSelectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF00F0B81CCEFBA0001F26AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF00F0C11CCEFBA0001F26AD /* ZGPhotoSelectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF00F0B31CCEFBA0001F26AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF00F0971CCEFB9F001F26AD /* ZGPhotoSelect */;
+			targetProxy = EF00F0B21CCEFBA0001F26AD /* PBXContainerItemProxy */;
+		};
+		EF00F0BE1CCEFBA0001F26AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF00F0971CCEFB9F001F26AD /* ZGPhotoSelect */;
+			targetProxy = EF00F0BD1CCEFBA0001F26AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF00F0A41CCEFBA0001F26AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF00F0A51CCEFBA0001F26AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF00F0A91CCEFBA0001F26AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF00F0AA1CCEFBA0001F26AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF00F0C31CCEFBA0001F26AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF00F0C41CCEFBA0001F26AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF00F0C61CCEFBA0001F26AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF00F0C71CCEFBA0001F26AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF00F0C91CCEFBA0001F26AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZGPhotoSelectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZGPhotoSelect.app/ZGPhotoSelect";
+			};
+			name = Debug;
+		};
+		EF00F0CA1CCEFBA0001F26AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZGPhotoSelectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZGPhotoSelect.app/ZGPhotoSelect";
+			};
+			name = Release;
+		};
+		EF00F0CC1CCEFBA0001F26AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZGPhotoSelectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZGPhotoSelect;
+			};
+			name = Debug;
+		};
+		EF00F0CD1CCEFBA0001F26AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZGPhotoSelectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZGPhotoSelect;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF00F0931CCEFB9F001F26AD /* Build configuration list for PBXProject "ZGPhotoSelect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF00F0C31CCEFBA0001F26AD /* Debug */,
+				EF00F0C41CCEFBA0001F26AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF00F0C51CCEFBA0001F26AD /* Build configuration list for PBXNativeTarget "ZGPhotoSelect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF00F0C61CCEFBA0001F26AD /* Debug */,
+				EF00F0C71CCEFBA0001F26AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF00F0C81CCEFBA0001F26AD /* Build configuration list for PBXNativeTarget "ZGPhotoSelectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF00F0C91CCEFBA0001F26AD /* Debug */,
+				EF00F0CA1CCEFBA0001F26AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF00F0CB1CCEFBA0001F26AD /* Build configuration list for PBXNativeTarget "ZGPhotoSelectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF00F0CC1CCEFBA0001F26AD /* Debug */,
+				EF00F0CD1CCEFBA0001F26AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF00F0901CCEFB9F001F26AD /* Project object */;
+}
