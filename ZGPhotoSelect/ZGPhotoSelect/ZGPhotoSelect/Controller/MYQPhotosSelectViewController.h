@@ -14,13 +14,14 @@ typedef enum : NSUInteger {
     MYQPhotosSelectViewControllerTypePrivatePhoto,
 } MYQPhotosSelectViewControllerType;
 
-typedef void(^MYQPhotosSelectCompleteBlock)(NSMutableArray * selectedPhotos,CGFloat price,NSString *message,MYQPhotosSelectViewControllerType photoType);
 
 @interface MYQPhotosSelectViewController : UIViewController
 
-@property (copy, nonatomic) MYQPhotosSelectCompleteBlock photosSelectCompleteBlock;
+@property (copy, nonatomic) void(^photosSelectCompleteBlock)(NSMutableArray * selectedPhotos,MYQPhotosSelectViewControllerType photoType);
 
 @property (assign, nonatomic) MYQPhotosSelectViewControllerType photoType;
+
+@property (assign, nonatomic) NSInteger maxSelectedPhotoNumber;
 
 - (void)relaodCollectionViewWithSelectedAssetArray:(NSMutableArray *)selecteAssetsArray;
 

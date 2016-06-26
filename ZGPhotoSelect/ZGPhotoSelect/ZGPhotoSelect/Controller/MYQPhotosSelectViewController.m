@@ -10,8 +10,8 @@
 
 #import "MYQPhotoCollectionViewCell.h"
 #import "MYQPhotoCycleController.h"
-#import "MYQPictureRedPacketSetMoneyViewController.h"
 #import "UIColor+DHUtil.h"
+#import "UIImage+DHUtil.h"
 
 @interface MYQPhotosSelectViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MYQPhotoCollectionViewCellDelegate,MYQPhotoCycleControllerDelegate>
 
@@ -22,8 +22,6 @@
 @property (strong, nonatomic) NSMutableArray *selecteAssetsArray;
 
 @property (weak, nonatomic) UICollectionView *collectionView;
-
-@property (assign, nonatomic) NSInteger maxSelectedPhotoNumber;
 
 @property (weak, nonatomic) UIButton *sendButton;
 
@@ -43,13 +41,8 @@
     
     self.assetLibrary = [MYQAlassetLibraryManager shareAlassetLibraryManager].assetLibrary;
     
-    self.maxSelectedPhotoNumber = 9;
-    if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto ) {
-        self.maxSelectedPhotoNumber = 1;
-    }
-    
+    [self setupMaxSelectedPhotoNumber];
     [self setupViews];
-    
     [self loadPhotos];
 }
 
@@ -74,6 +67,17 @@
     [self setupBottomBarView];
 }
 
+- (void)setupMaxSelectedPhotoNumber
+{
+    if (self.maxSelectedPhotoNumber == 0) {
+        self.maxSelectedPhotoNumber = 9;
+        if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto ) {
+            self.maxSelectedPhotoNumber = 1;
+        }
+    }
+
+}
+
 - (void)setupRightBarButton
 {
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -87,7 +91,7 @@
 - (void)setupCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) collectionViewLayout:flowLayout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 44 - 64) collectionViewLayout:flowLayout];
     self.collectionView = collectionView;
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.dataSource = self;
@@ -208,29 +212,8 @@
     if (self.selecteAssetsArray.count <= 0) {
         return;
     }
-
-    if (self.photoType == MYQPhotosSelectViewControllerTypeNormal) { // 普通图片
-        
-        if (self.photosSelectCompleteBlock) {
-            self.photosSelectCompleteBlock(self.selecteAssetsArray,0,nil,self.photoType);
-        }
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
-    }else  {
-        MYQPictureRedPacketSetMoneyViewController *picRedPacketVC = [[MYQPictureRedPacketSetMoneyViewController alloc] init];
-        if (self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto) {
-            picRedPacketVC.sendButtonTitleString = @"添加私密照";
-            picRedPacketVC.titleString = @"私密照";
-        }
-        __weak typeof(self) weakSelf = self;
-        picRedPacketVC.redPacketPicSendBlock = ^(CGFloat price,NSString *message){
-            if (weakSelf.photosSelectCompleteBlock) {
-                weakSelf.photosSelectCompleteBlock(weakSelf.selecteAssetsArray,price,message,self.photoType);
-            }
-            [weakSelf dismissViewControllerAnimated:YES completion:nil];
-        };
-        
-        [self.navigationController pushViewController:picRedPacketVC animated:YES];
+    if (self.photosSelectCompleteBlock) {
+        self.photosSelectCompleteBlock(self.selecteAssetsArray,self.photoType);
     }
 }
 

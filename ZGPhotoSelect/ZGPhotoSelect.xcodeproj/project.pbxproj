@@ -19,11 +19,10 @@
 		EF00F0D71CCEFC2D001F26AD /* MYQPhotosSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D51CCEFC2D001F26AD /* MYQPhotosSelectViewController.m */; };
 		EF00F0DA1CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D91CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m */; };
 		EF00F0DD1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0DC1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m */; };
-		EF00F0E11CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0DF1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m */; };
-		EF00F0E21CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF00F0E01CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib */; };
 		EF00F0E61CCEFDD5001F26AD /* UIColor+DHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */; };
 		EF00F0E91CCF00C6001F26AD /* UIImage+DHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */; };
 		EF0C2ED21CD0CAF30099CAAA /* ZGPhotoSelect.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF0C2ED11CD0CAF30099CAAA /* ZGPhotoSelect.gif */; };
+		EFCE2B3E1D1E1FFD00352D2B /* ZGPhotoPickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCE2B3D1D1E1FFD00352D2B /* ZGPhotoPickupController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,14 +67,13 @@
 		EF00F0D91CCEFCC4001F26AD /* MYQPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		EF00F0DB1CCEFCEA001F26AD /* MYQAlassetLibraryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQAlassetLibraryManager.h; sourceTree = "<group>"; };
 		EF00F0DC1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQAlassetLibraryManager.m; sourceTree = "<group>"; };
-		EF00F0DE1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQPictureRedPacketSetMoneyViewController.h; sourceTree = "<group>"; };
-		EF00F0DF1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQPictureRedPacketSetMoneyViewController.m; sourceTree = "<group>"; };
-		EF00F0E01CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYQPictureRedPacketSetMoneyViewController.xib; sourceTree = "<group>"; };
 		EF00F0E41CCEFDD5001F26AD /* UIColor+DHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DHUtil.h"; sourceTree = "<group>"; };
 		EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DHUtil.m"; sourceTree = "<group>"; };
 		EF00F0E71CCF00C6001F26AD /* UIImage+DHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DHUtil.h"; sourceTree = "<group>"; };
 		EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DHUtil.m"; sourceTree = "<group>"; };
 		EF0C2ED11CD0CAF30099CAAA /* ZGPhotoSelect.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGPhotoSelect.gif; sourceTree = "<group>"; };
+		EFCE2B3C1D1E1FFD00352D2B /* ZGPhotoPickupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoPickupController.h; sourceTree = "<group>"; };
+		EFCE2B3D1D1E1FFD00352D2B /* ZGPhotoPickupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoPickupController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +183,8 @@
 				EF00F0D31CCEFC2D001F26AD /* MYQPhotoCycleController.m */,
 				EF00F0D41CCEFC2D001F26AD /* MYQPhotosSelectViewController.h */,
 				EF00F0D51CCEFC2D001F26AD /* MYQPhotosSelectViewController.m */,
-				EF00F0DE1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.h */,
-				EF00F0DF1CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m */,
-				EF00F0E01CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib */,
+				EFCE2B3C1D1E1FFD00352D2B /* ZGPhotoPickupController.h */,
+				EFCE2B3D1D1E1FFD00352D2B /* ZGPhotoPickupController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 				EF00F0A81CCEFBA0001F26AD /* Assets.xcassets in Resources */,
 				EF0C2ED21CD0CAF30099CAAA /* ZGPhotoSelect.gif in Resources */,
 				EF00F0A61CCEFBA0001F26AD /* Main.storyboard in Resources */,
-				EF00F0E21CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF00F0A31CCEFBA0001F26AD /* ViewController.m in Sources */,
+				EFCE2B3E1D1E1FFD00352D2B /* ZGPhotoPickupController.m in Sources */,
 				EF00F0E91CCF00C6001F26AD /* UIImage+DHUtil.m in Sources */,
 				EF00F0D61CCEFC2D001F26AD /* MYQPhotoCycleController.m in Sources */,
 				EF00F0A01CCEFBA0001F26AD /* AppDelegate.m in Sources */,
@@ -362,7 +359,6 @@
 				EF00F09D1CCEFBA0001F26AD /* main.m in Sources */,
 				EF00F0DD1CCEFCEA001F26AD /* MYQAlassetLibraryManager.m in Sources */,
 				EF00F0E61CCEFDD5001F26AD /* UIColor+DHUtil.m in Sources */,
-				EF00F0E11CCEFD3D001F26AD /* MYQPictureRedPacketSetMoneyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

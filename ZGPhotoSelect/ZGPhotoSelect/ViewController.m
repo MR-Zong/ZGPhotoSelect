@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "MYQPhotosSelectViewController.h"
-
+#import "ZGPhotoPickupController.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) ZGPhotoPickupController *photoPickupVC;
 
 @end
 
@@ -22,8 +23,8 @@
     
     UIButton *exampleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [exampleButton setTitle:@"照片-样例" forState:UIControlStateNormal];
-    exampleButton.frame = CGRectMake(140, 200, 100, 100);
-    exampleButton.backgroundColor = [UIColor blackColor];
+    exampleButton.frame = CGRectMake(140, 200, 100,30);
+    [exampleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [exampleButton addTarget:self action:@selector(exampleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:exampleButton];
 }
@@ -32,9 +33,11 @@
 #pragma mark - exampleButtonClick
 - (void)exampleButtonClick:(UIButton *)btn
 {
-    MYQPhotosSelectViewController *photoSelectVC = [[MYQPhotosSelectViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:photoSelectVC];
-    [self presentViewController:nav animated:YES completion:nil];
+    self.photoPickupVC = [ZGPhotoPickupController photoPickupWithViewController:self completeBlock:^(NSArray *imageArray, NSArray *assetArray, NSInteger code) {
+        NSLog(@"image pickup");
+    }];
+  
+    [self.photoPickupVC show];
 }
 
 
