@@ -139,9 +139,8 @@
 {
     // 权限
     ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
-    NSLog(@"author %zd",author);
+//    NSLog(@"author %zd",author);
     
-
     NSMutableArray *groupArray = [NSMutableArray array];
     
     [self.assetLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
@@ -212,9 +211,11 @@
     if (self.selecteAssetsArray.count <= 0) {
         return;
     }
+    
     if (self.photosSelectCompleteBlock) {
         self.photosSelectCompleteBlock(self.selecteAssetsArray,self.photoType);
     }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

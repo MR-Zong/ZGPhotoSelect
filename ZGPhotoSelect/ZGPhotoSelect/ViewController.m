@@ -22,8 +22,8 @@
     
     
     UIButton *exampleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [exampleButton setTitle:@"照片-样例" forState:UIControlStateNormal];
-    exampleButton.frame = CGRectMake(140, 200, 100,30);
+    [exampleButton setTitle:@"照片样例(请点击)" forState:UIControlStateNormal];
+    exampleButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 140) / 2.0, 200, 150,30);
     [exampleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [exampleButton addTarget:self action:@selector(exampleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:exampleButton];
@@ -34,7 +34,7 @@
 - (void)exampleButtonClick:(UIButton *)btn
 {
     self.photoPickupVC = [ZGPhotoPickupController photoPickupWithViewController:self completeBlock:^(NSArray *imageArray, NSArray *assetArray, NSInteger code) {
-        NSLog(@"image pickup");
+        NSLog(@"image pickup success");
     }];
   
     [self.photoPickupVC show];

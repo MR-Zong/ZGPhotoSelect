@@ -10,7 +10,7 @@
 #import "MYQPhotosSelectViewController.h"
 #import "MYQAlassetLibraryManager.h"
 
-@interface ZGPhotoPickupController () <UIActionSheetDelegate,UIImagePickerControllerDelegate>
+@interface ZGPhotoPickupController () <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, weak) UIViewController *viewController;
 
@@ -31,7 +31,7 @@
 
 - (void)show
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍一张",@"选取一张", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍一张照片",@"从相册选一张", nil];
     [actionSheet showInView:self.viewController.view];
     
 }
@@ -47,7 +47,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
-    if ([title isEqualToString:@"拍一张"]) {
+    if ([title isEqualToString:@"拍一张照片"]) {
         UIImagePickerController *pickVC = [[UIImagePickerController alloc] init];
         if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear] == YES) {
             
@@ -56,7 +56,7 @@
             [self.viewController presentViewController:pickVC animated:YES completion:nil];
         }
         
-    }else if([title isEqualToString:@"选取一张"]){
+    }else if([title isEqualToString:@"从相册选一张"]){
         MYQPhotosSelectViewController *photoSelectVC = [[MYQPhotosSelectViewController alloc] init];
         __weak typeof(self) weakSelf = self;
         [photoSelectVC setPhotosSelectCompleteBlock:^(NSMutableArray *selectAssetArray, MYQPhotosSelectViewControllerType type) {
