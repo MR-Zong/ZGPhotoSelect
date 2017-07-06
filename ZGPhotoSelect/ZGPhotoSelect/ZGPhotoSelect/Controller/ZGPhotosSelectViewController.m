@@ -1,19 +1,19 @@
 //
-//  MYQPhotosSelectViewController.m
+//  ZGPhotosSelectViewController.m
 //  MianYangQuan
 //
 //  Created by Zong on 16/4/8.
 //  Copyright © 2016年 kk. All rights reserved.
 //
 
-#import "MYQPhotosSelectViewController.h"
+#import "ZGPhotosSelectViewController.h"
 
-#import "MYQPhotoCollectionViewCell.h"
-#import "MYQPhotoCycleController.h"
+#import "ZGPhotoCollectionViewCell.h"
+#import "ZGPhotoCycleController.h"
 #import "UIColor+DHUtil.h"
 #import "UIImage+DHUtil.h"
 
-@interface MYQPhotosSelectViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MYQPhotoCollectionViewCellDelegate,MYQPhotoCycleControllerDelegate>
+@interface ZGPhotosSelectViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,ZGPhotoCollectionViewCellDelegate,ZGPhotoCycleControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *mAssetsArray;
 
@@ -30,7 +30,7 @@
 @end
 
 
-@implementation MYQPhotosSelectViewController
+@implementation ZGPhotosSelectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +39,7 @@
     
     self.selecteAssetsArray = [[NSMutableArray alloc] init];
     
-    self.assetLibrary = [MYQAlassetLibraryManager shareAlassetLibraryManager].assetLibrary;
+    self.assetLibrary = [ZGAlassetLibraryManager shareAlassetLibraryManager].assetLibrary;
     
     [self setupMaxSelectedPhotoNumber];
     [self setupViews];
@@ -51,7 +51,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:MYQ_Default_Navi_Bar_Background] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:ZG_Default_Navi_Bar_Background] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)setupViews
@@ -71,7 +71,7 @@
 {
     if (self.maxSelectedPhotoNumber == 0) {
         self.maxSelectedPhotoNumber = 9;
-        if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto ) {
+        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto ) {
             self.maxSelectedPhotoNumber = 1;
         }
     }
@@ -96,7 +96,7 @@
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    [collectionView registerClass:[MYQPhotoCollectionViewCell class] forCellWithReuseIdentifier:kPhotoCollectionViewCellID];
+    [collectionView registerClass:[ZGPhotoCollectionViewCell class] forCellWithReuseIdentifier:kPhotoCollectionViewCellID];
     [self.view addSubview:collectionView];
 }
 
@@ -109,7 +109,7 @@
     UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.sendButton = sendButton;
     [sendButton setTitle:@"发送" forState:UIControlStateNormal];
-    if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto) {
+    if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
         [sendButton setTitle:@"下一步" forState:UIControlStateNormal];
     }
     CGFloat sendButtonWidth = [[sendButton titleForState:UIControlStateNormal] sizeWithAttributes:@{NSFontAttributeName :sendButton.titleLabel.font}].width + 20;
@@ -224,7 +224,7 @@
     if (self.selecteAssetsArray.count <= 0) {
         return;
     }
-    MYQPhotoCycleController *photoCycleVC = [[MYQPhotoCycleController alloc] init];
+    ZGPhotoCycleController *photoCycleVC = [[ZGPhotoCycleController alloc] init];
     photoCycleVC.mAssetsArray = [self.selecteAssetsArray mutableCopy];
     photoCycleVC.selecteAssetsArray = [self.selecteAssetsArray mutableCopy];
     photoCycleVC.indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
@@ -251,7 +251,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MYQPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kPhotoCollectionViewCellID forIndexPath:indexPath];
+    ZGPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kPhotoCollectionViewCellID forIndexPath:indexPath];
     cell.indexPath = indexPath;
     cell.delegate = self;
     ALAsset *asset = self.mAssetsArray[indexPath.item];
@@ -286,7 +286,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MYQPhotoCycleController *photoCycleVC = [[MYQPhotoCycleController alloc] init];
+    ZGPhotoCycleController *photoCycleVC = [[ZGPhotoCycleController alloc] init];
     photoCycleVC.mAssetsArray = self.mAssetsArray;
     photoCycleVC.selecteAssetsArray = self.selecteAssetsArray;
     photoCycleVC.indexPath = indexPath;
@@ -298,8 +298,8 @@
 }
 
 
-#pragma mark - MYQPhotoCollectionViewCellDelegate
-- (void)photoCollectionViewCell:(MYQPhotoCollectionViewCell *)photoCell didClickSelectButtonWithIndexPath:(NSIndexPath *)indexPath
+#pragma mark - ZGPhotoCollectionViewCellDelegate
+- (void)photoCollectionViewCell:(ZGPhotoCollectionViewCell *)photoCell didClickSelectButtonWithIndexPath:(NSIndexPath *)indexPath
 {
     ALAsset *asset = self.mAssetsArray[indexPath.item];
     if ([self.selecteAssetsArray containsObject:asset]) {
@@ -327,18 +327,18 @@
         self.previewButton.enabled = YES;
         
         NSString *title = [NSString stringWithFormat:@"发送（%zd/%zd）",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
-        if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto) {
+        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
             title = [NSString stringWithFormat:@"下一步(%zd/%zd)",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
         }
         [self.sendButton setTitle:title forState:UIControlStateNormal];
         
-        [self.sendButton setTitleColor:MYQ_Default_Tint_Colot forState:UIControlStateNormal];
-        [self.previewButton setTitleColor:MYQ_Default_Tint_Colot forState:UIControlStateNormal];
+        [self.sendButton setTitleColor:ZG_Default_Tint_Colot forState:UIControlStateNormal];
+        [self.previewButton setTitleColor:ZG_Default_Tint_Colot forState:UIControlStateNormal];
     }else {
         self.sendButton.enabled = NO;
         self.previewButton.enabled = NO;
         NSString *title = @"发送";
-        if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto) {
+        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
             title = @"下一步";
         }
         [self.sendButton setTitle:title forState:UIControlStateNormal];
@@ -351,7 +351,7 @@
 }
 
 
-#pragma mark - MYQPhotoCycleControllerDelegate
+#pragma mark - ZGPhotoCycleControllerDelegate
 - (void)photoCycleControllerDidClickSendButton
 {
     [self clickSendButton:nil];

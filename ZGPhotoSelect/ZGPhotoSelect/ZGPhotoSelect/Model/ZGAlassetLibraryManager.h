@@ -1,5 +1,5 @@
 //
-//  MYQAlassetLibraryManager.h
+//  ZGAlassetLibraryManager.h
 //  MianYangQuan
 //
 //  Created by Zong on 16/4/12.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface MYQAlassetLibraryManager : NSObject
+@interface ZGAlassetLibraryManager : NSObject
 
 + (instancetype)shareAlassetLibraryManager;
 

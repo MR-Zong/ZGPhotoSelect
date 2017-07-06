@@ -1,27 +1,27 @@
 //
-//  MYQAlassetLibraryManager.m
+//  ZGAlassetLibraryManager.m
 //  MianYangQuan
 //
 //  Created by Zong on 16/4/12.
 //  Copyright © 2016年 kk. All rights reserved.
 //
 
-#import "MYQAlassetLibraryManager.h"
+#import "ZGAlassetLibraryManager.h"
 
 
-@implementation MYQAlassetLibraryManager
+@implementation ZGAlassetLibraryManager
 
 static ALAssetsLibrary *_alassetLibrary_ = nil;
 
 + (instancetype)shareAlassetLibraryManager
 {
-    static MYQAlassetLibraryManager *_alassetLibraryM_ = nil;
+    static ZGAlassetLibraryManager *_alassetLibraryM_ = nil;
     static dispatch_once_t onceToken;
     if (!_alassetLibraryM_) {
         
         dispatch_once(&onceToken, ^{
             
-            _alassetLibraryM_ = [[MYQAlassetLibraryManager alloc] init];
+            _alassetLibraryM_ = [[ZGAlassetLibraryManager alloc] init];
             _alassetLibrary_ = [[ALAssetsLibrary alloc] init];
         });
     }

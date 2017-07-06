@@ -1,14 +1,14 @@
 //
-//  MYQPhotoCollectionViewCell.m
+//  ZGPhotoCollectionViewCell.m
 //  MianYangQuan
 //
 //  Created by Zong on 16/4/8.
 //  Copyright © 2016年 kk. All rights reserved.
 //
 
-#import "MYQPhotoCollectionViewCell.h"
+#import "ZGPhotoCollectionViewCell.h"
 
-@interface MYQPhotoCollectionViewCell ()
+@interface ZGPhotoCollectionViewCell ()
 
 @property (nonatomic, weak) UIImageView *imageView;
 
@@ -17,7 +17,7 @@
 @end
 
 
-@implementation MYQPhotoCollectionViewCell
+@implementation ZGPhotoCollectionViewCell
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

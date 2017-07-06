@@ -1,22 +1,22 @@
 //
-//  MYQPhotoCycleController.m
+//  ZGPhotoCycleController.m
 //  MianYangQuan
 //
 //  Created by Zong on 16/4/8.
 //  Copyright © 2016年 kk. All rights reserved.
 //
 
-#import "MYQPhotoCycleController.h"
-#import "MYQPhotosSelectViewController.h"
-#import "MYQAlassetLibraryManager.h"
+#import "ZGPhotoCycleController.h"
+#import "ZGPhotosSelectViewController.h"
+#import "ZGAlassetLibraryManager.h"
 #import "UIImage+DHUtil.h"
 #import "UIColor+DHUtil.h"
 
-@interface MYQPhotoCycleCell () <UIScrollViewDelegate>
+@interface ZGPhotoCycleCell () <UIScrollViewDelegate>
 
 @end
 
-@implementation MYQPhotoCycleCell
+@implementation ZGPhotoCycleCell
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -81,7 +81,7 @@
 
 
 
-@interface MYQPhotoCycleController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MYQPhotoCycleCellDelegate>
+@interface ZGPhotoCycleController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,ZGPhotoCycleCellDelegate>
 
 @property (weak, nonatomic) UICollectionView *collectionView;
 
@@ -93,7 +93,7 @@
 
 @end
 
-@implementation MYQPhotoCycleController
+@implementation ZGPhotoCycleController
 
 static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 
@@ -115,7 +115,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 
 - (void)initialize
 {
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:[MYQ_Default_Navi_Bar_Background colorWithAlphaComponent:0.8]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:[ZG_Default_Navi_Bar_Background colorWithAlphaComponent:0.8]] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)setupBackBarButton
@@ -156,7 +156,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
     collectionView.dataSource = self;
     collectionView.delegate = self;
     collectionView.pagingEnabled = YES;
-    [collectionView registerClass:[MYQPhotoCycleCell class] forCellWithReuseIdentifier:kPhotoCycleCellID];
+    [collectionView registerClass:[ZGPhotoCycleCell class] forCellWithReuseIdentifier:kPhotoCycleCellID];
     [self.view addSubview:collectionView];
     [collectionView scrollToItemAtIndexPath:self.indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 
@@ -173,7 +173,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 {
     UIView *bottomBarView = [[UIView alloc] init];
     self.bottomBarView = bottomBarView;
-    bottomBarView.backgroundColor = [MYQ_Default_Navi_Bar_Background colorWithAlphaComponent:0.8];
+    bottomBarView.backgroundColor = [ZG_Default_Navi_Bar_Background colorWithAlphaComponent:0.8];
     // 这里的 44*2 是跟上面collectionView的frame.y = -44有关的，不要随便模仿
     bottomBarView.frame = CGRectMake(0, self.view.bounds.size.height - 44, self.view.bounds.size.width, 44);
     [self.view addSubview:bottomBarView];
@@ -242,7 +242,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MYQPhotoCycleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kPhotoCycleCellID forIndexPath:indexPath];
+    ZGPhotoCycleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kPhotoCycleCellID forIndexPath:indexPath];
 
     ALAsset *asset = self.mAssetsArray[indexPath.item];
     cell.imageView.image = [UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
@@ -287,7 +287,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
     }
 }
 
-#pragma mark - MYQPhotoCycleCellDelegate
+#pragma mark - ZGPhotoCycleCellDelegate
 - (void)photoCycleCellImageViewDidTap
 {
     self.navigationController.navigationBar.hidden = !self.navigationController.navigationBar.hidden;
@@ -306,17 +306,17 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
         self.sendButton.enabled = YES;
         
         NSString *title = [NSString stringWithFormat:@"发送（%zd/%zd）",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
-        if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto) {
+        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
             title = [NSString stringWithFormat:@"下一步(%zd/%zd)",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
         }
         [self.sendButton setTitle:title forState:UIControlStateNormal];
-        [self.sendButton setTitleColor:MYQ_Default_Tint_Colot forState:UIControlStateNormal];
+        [self.sendButton setTitleColor:ZG_Default_Tint_Colot forState:UIControlStateNormal];
 
     }else {
         self.sendButton.enabled = NO;
 
         NSString *title = @"发送";
-        if (self.photoType == MYQPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == MYQPhotosSelectViewControllerTypePrivatePhoto) {
+        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
             title = @"下一步";
         }
         [self.sendButton setTitle:title forState:UIControlStateNormal];

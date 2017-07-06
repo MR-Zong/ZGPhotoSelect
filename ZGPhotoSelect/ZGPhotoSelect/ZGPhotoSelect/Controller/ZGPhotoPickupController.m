@@ -7,8 +7,8 @@
 //
 
 #import "ZGPhotoPickupController.h"
-#import "MYQPhotosSelectViewController.h"
-#import "MYQAlassetLibraryManager.h"
+#import "ZGPhotosSelectViewController.h"
+#import "ZGAlassetLibraryManager.h"
 
 @interface ZGPhotoPickupController () <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -57,9 +57,9 @@
         }
         
     }else if([title isEqualToString:@"从相册选一张"]){
-        MYQPhotosSelectViewController *photoSelectVC = [[MYQPhotosSelectViewController alloc] init];
+        ZGPhotosSelectViewController *photoSelectVC = [[ZGPhotosSelectViewController alloc] init];
         __weak typeof(self) weakSelf = self;
-        [photoSelectVC setPhotosSelectCompleteBlock:^(NSMutableArray *selectAssetArray, MYQPhotosSelectViewControllerType type) {
+        [photoSelectVC setPhotosSelectCompleteBlock:^(NSMutableArray *selectAssetArray, ZGPhotosSelectViewControllerType type) {
             if (weakSelf.completeBlock) {
                 NSMutableArray *mArray = [NSMutableArray array];
                 for (ALAsset *asset in selectAssetArray) {
