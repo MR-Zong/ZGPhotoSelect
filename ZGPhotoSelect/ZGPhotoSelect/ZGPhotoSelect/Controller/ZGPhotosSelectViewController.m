@@ -12,6 +12,7 @@
 #import "ZGPhotoCycleController.h"
 #import "UIColor+DHUtil.h"
 #import "UIImage+DHUtil.h"
+#import "ZGProgressHUD.h"
 
 @interface ZGPhotosSelectViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,ZGPhotoCollectionViewCellDelegate,ZGPhotoCycleControllerDelegate>
 
@@ -27,6 +28,8 @@
 
 @property (weak, nonatomic) UIButton *previewButton;
 
+@property (strong, nonatomic) NSString *defaultSendBtnTitle;
+
 @end
 
 
@@ -40,6 +43,8 @@
     self.selecteAssetsArray = [[NSMutableArray alloc] init];
     
     self.assetLibrary = [ZGAlassetLibraryManager shareAlassetLibraryManager].assetLibrary;
+    
+    self.defaultSendBtnTitle = @"发送";
     
     [self setupMaxSelectedPhotoNumber];
     [self setupViews];
@@ -71,9 +76,6 @@
 {
     if (self.maxSelectedPhotoNumber == 0) {
         self.maxSelectedPhotoNumber = 9;
-        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto ) {
-            self.maxSelectedPhotoNumber = 1;
-        }
     }
 
 }
@@ -108,10 +110,12 @@
     
     UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.sendButton = sendButton;
-    [sendButton setTitle:@"发送" forState:UIControlStateNormal];
-    if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
-        [sendButton setTitle:@"下一步" forState:UIControlStateNormal];
+    NSString *btnTitle = self.defaultSendBtnTitle;
+    if (self.sendButtonTitle.length > 0) {
+        btnTitle = self.sendButtonTitle;
     }
+    [sendButton setTitle:btnTitle forState:UIControlStateNormal];
+
     CGFloat sendButtonWidth = [[sendButton titleForState:UIControlStateNormal] sizeWithAttributes:@{NSFontAttributeName :sendButton.titleLabel.font}].width + 20;
     sendButton.frame = CGRectMake(self.view.bounds.size.width - sendButtonWidth, 0, sendButtonWidth, bottomBarView.bounds.size.height);
     sendButton.enabled = NO;
@@ -213,7 +217,7 @@
     }
     
     if (self.photosSelectCompleteBlock) {
-        self.photosSelectCompleteBlock(self.selecteAssetsArray,self.photoType);
+        self.photosSelectCompleteBlock(self.selecteAssetsArray,self.photoVCType);
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -231,7 +235,8 @@
     photoCycleVC.maxSelectedPhotoNumber = self.maxSelectedPhotoNumber;
     photoCycleVC.photosSelectVC = self;
     photoCycleVC.delegate = self;
-    photoCycleVC.photoType = self.photoType;
+    photoCycleVC.photoVCType = self.photoVCType;
+    photoCycleVC.sendButtonTitle = self.defaultSendBtnTitle;
     [self.navigationController pushViewController:photoCycleVC animated:YES];
 }
 
@@ -293,7 +298,8 @@
      photoCycleVC.maxSelectedPhotoNumber = self.maxSelectedPhotoNumber;
     photoCycleVC.photosSelectVC = self;
     photoCycleVC.delegate = self;
-    photoCycleVC.photoType = self.photoType;
+    photoCycleVC.photoVCType = self.photoVCType;
+    photoCycleVC.sendButtonTitle = self.defaultSendBtnTitle;
     [self.navigationController pushViewController:photoCycleVC animated:YES];
 }
 
@@ -326,21 +332,33 @@
         self.sendButton.enabled = YES;
         self.previewButton.enabled = YES;
         
-        NSString *title = [NSString stringWithFormat:@"发送（%zd/%zd）",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
-        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
-            title = [NSString stringWithFormat:@"下一步(%zd/%zd)",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
+        if (self.sendButtonTitle.length > 0) {
+            self.defaultSendBtnTitle = self.sendButtonTitle;
         }
+
+        NSString *title = [NSString stringWithFormat:@"%@（%zd/%zd）",self.defaultSendBtnTitle,self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
+        
+        if (self.photoVCType == ZGPhotosSelectViewControllerTypeDefault) {
+            ;
+        }else if (self.photoVCType == ZGPhotosSelectViewControllerTypeNoNumber){
+            title = [NSString stringWithFormat:@"%@",self.defaultSendBtnTitle];
+        }
+        
         [self.sendButton setTitle:title forState:UIControlStateNormal];
         
         [self.sendButton setTitleColor:ZG_Default_Tint_Colot forState:UIControlStateNormal];
         [self.previewButton setTitleColor:ZG_Default_Tint_Colot forState:UIControlStateNormal];
+        
     }else {
         self.sendButton.enabled = NO;
         self.previewButton.enabled = NO;
-        NSString *title = @"发送";
-        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
-            title = @"下一步";
+
+        if (self.sendButtonTitle.length > 0) {
+            self.defaultSendBtnTitle = self.sendButtonTitle;
         }
+        
+        NSString *title = [NSString stringWithFormat:@"%@",self.defaultSendBtnTitle];
+
         [self.sendButton setTitle:title forState:UIControlStateNormal];
         [self.sendButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [self.previewButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -364,7 +382,7 @@
 
 - (void)showAlertMessage:(NSString *)message view:(UIView *)view
 {
-    
+    [ZGProgressHUD showInView:view message:message mode:ZGProgressHUDModeToast];
 }
 
 @end

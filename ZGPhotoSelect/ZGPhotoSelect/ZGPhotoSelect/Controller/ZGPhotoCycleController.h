@@ -61,7 +61,13 @@
 
 @property (weak, nonatomic) id <ZGPhotoCycleControllerDelegate> delegate;
 
-@property (assign, nonatomic) ZGPhotosSelectViewControllerType photoType;
+@property (assign, nonatomic) ZGPhotosSelectViewControllerType photoVCType;
+
+/**
+ * sendButtonTitle 发送按钮的文案
+ */
+@property (strong, nonatomic) NSString *sendButtonTitle;
+
 
 
 

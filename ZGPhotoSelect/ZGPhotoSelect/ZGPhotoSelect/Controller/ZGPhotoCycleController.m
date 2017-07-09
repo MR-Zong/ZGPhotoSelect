@@ -12,6 +12,8 @@
 #import "UIImage+DHUtil.h"
 #import "UIColor+DHUtil.h"
 
+#import "ZGProgressHUD.h"
+
 @interface ZGPhotoCycleCell () <UIScrollViewDelegate>
 
 @end
@@ -183,7 +185,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
     CGFloat sendButtonWidth = 60;
     CGFloat sendButtonHeight = 22;
     sendButton.frame = CGRectMake(self.bottomBarView.bounds.size.width - sendButtonWidth - 10, (self.bottomBarView.bounds.size.height - sendButtonHeight) / 2.0, sendButtonWidth, sendButtonHeight);
-    [sendButton setTitle:@"发送" forState:UIControlStateNormal];
+    [sendButton setTitle:self.sendButtonTitle forState:UIControlStateNormal];
     [sendButton addTarget:self action:@selector(sendButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self refreshBottomBarView];
     [bottomBarView addSubview:sendButton];
@@ -305,21 +307,19 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
     if (self.selecteAssetsArray.count > 0) {
         self.sendButton.enabled = YES;
         
-        NSString *title = [NSString stringWithFormat:@"发送（%zd/%zd）",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
-        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
-            title = [NSString stringWithFormat:@"下一步(%zd/%zd)",self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
+        NSString *title = [NSString stringWithFormat:@"%@（%zd/%zd）",self.sendButtonTitle,self.selecteAssetsArray.count,self.maxSelectedPhotoNumber];
+        if (self.photoVCType == ZGPhotosSelectViewControllerTypeDefault) {
+            ;
+        }else if (self.photoVCType == ZGPhotosSelectViewControllerTypeNoNumber){
+            title = [NSString stringWithFormat:@"%@",self.sendButtonTitle];
         }
+
         [self.sendButton setTitle:title forState:UIControlStateNormal];
         [self.sendButton setTitleColor:ZG_Default_Tint_Colot forState:UIControlStateNormal];
 
     }else {
         self.sendButton.enabled = NO;
-
-        NSString *title = @"发送";
-        if (self.photoType == ZGPhotosSelectViewControllerTypeRedPacketPicture || self.photoType == ZGPhotosSelectViewControllerTypePrivatePhoto) {
-            title = @"下一步";
-        }
-        [self.sendButton setTitle:title forState:UIControlStateNormal];
+        [self.sendButton setTitle:self.sendButtonTitle forState:UIControlStateNormal];
         [self.sendButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     }
     
@@ -330,7 +330,7 @@ static NSString * const kPhotoCycleCellID = @"kPhotoCycleCellID";
 
 - (void)showAlertMessage:(NSString *)message view:(UIView *)view
 {
-    
+    [ZGProgressHUD showInView:view message:message mode:ZGProgressHUDModeToast];
 }
 
 @end

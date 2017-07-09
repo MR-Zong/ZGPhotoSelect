@@ -7,7 +7,6 @@
 //
 
 #import "ZGPhotoPickupController.h"
-#import "ZGPhotosSelectViewController.h"
 #import "ZGAlassetLibraryManager.h"
 
 @interface ZGPhotoPickupController () <UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -15,6 +14,9 @@
 @property (nonatomic, weak) UIViewController *viewController;
 
 @property (nonatomic, copy) void(^completeBlock)(NSArray *, NSArray *, NSInteger);
+
+@property (nonatomic, strong) UIActionSheet *actionSheet;
+@property (nonatomic, strong) ZGPhotosSelectViewController *photoSelectVC;
 
 @end
 
@@ -25,16 +27,27 @@
     ZGPhotoPickupController *photoPickupVC = [[self alloc] init];
     photoPickupVC.viewController = viewController;
     photoPickupVC.completeBlock = completeBlock;
+    
+    photoPickupVC.photoGraphVC = [[UIImagePickerController alloc] init];
+    if (!TARGET_IPHONE_SIMULATOR) {
+        
+        photoPickupVC.photoGraphVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    photoPickupVC.photoGraphVC.delegate = photoPickupVC;
+
+
     return photoPickupVC;
 }
 
 
+
 - (void)show
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍一张照片",@"从相册选一张", nil];
-    [actionSheet showInView:self.viewController.view];
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍一张照片",@"从相册选一张", nil];
+    [self.actionSheet showInView:self.viewController.view];
     
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,18 +61,19 @@
 {
     NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
     if ([title isEqualToString:@"拍一张照片"]) {
-        UIImagePickerController *pickVC = [[UIImagePickerController alloc] init];
         if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear] == YES) {
-            
-            pickVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-            pickVC.delegate = self;
-            [self.viewController presentViewController:pickVC animated:YES completion:nil];
+            [self.viewController presentViewController:self.photoGraphVC animated:YES completion:nil];
         }
         
     }else if([title isEqualToString:@"从相册选一张"]){
-        ZGPhotosSelectViewController *photoSelectVC = [[ZGPhotosSelectViewController alloc] init];
+
+        self.photoSelectVC = [[ZGPhotosSelectViewController alloc] init];
+        self.photoSelectVC.sendButtonTitle = self.sendButtonTitle;
+        self.photoSelectVC.maxSelectedPhotoNumber = self.maxSelectedPhotoNumber;
+        self.photoSelectVC.photoVCType = self.photoVCType;
+
         __weak typeof(self) weakSelf = self;
-        [photoSelectVC setPhotosSelectCompleteBlock:^(NSMutableArray *selectAssetArray, ZGPhotosSelectViewControllerType type) {
+        [self.photoSelectVC setPhotosSelectCompleteBlock:^(NSMutableArray *selectAssetArray, ZGPhotosSelectViewControllerType type) {
             if (weakSelf.completeBlock) {
                 NSMutableArray *mArray = [NSMutableArray array];
                 for (ALAsset *asset in selectAssetArray) {
@@ -70,7 +84,7 @@
 
         }];
 
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:photoSelectVC];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.photoSelectVC];
         [self.viewController presentViewController:nav animated:YES completion:nil];
 
     }
@@ -95,5 +109,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - getter
+- (UIActionSheet *)actionSheet
+{
+    if (!_actionSheet) {
+        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self
+                                          cancelButtonTitle:@"取消"
+                                     destructiveButtonTitle:nil
+                                          otherButtonTitles:@"拍一张照片",@"从相册选一张", nil];
+    }
+    return _actionSheet;
+}
 
 @end

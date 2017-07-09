@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    ZGPhotosSelectViewControllerTypeNormal,
-    ZGPhotosSelectViewControllerTypeRedPacketPicture,
-    ZGPhotosSelectViewControllerTypePrivatePhoto,
+    ZGPhotosSelectViewControllerTypeDefault,
+    ZGPhotosSelectViewControllerTypeNoNumber,
 } ZGPhotosSelectViewControllerType;
 
 
@@ -19,9 +18,11 @@ typedef enum : NSUInteger {
 
 @property (copy, nonatomic) void(^photosSelectCompleteBlock)(NSMutableArray * selectedPhotos,ZGPhotosSelectViewControllerType photoType);
 
-@property (assign, nonatomic) ZGPhotosSelectViewControllerType photoType;
+@property (assign, nonatomic) ZGPhotosSelectViewControllerType photoVCType;
 
 @property (assign, nonatomic) NSInteger maxSelectedPhotoNumber;
+
+@property (strong, nonatomic) NSString *sendButtonTitle;
 
 - (void)relaodCollectionViewWithSelectedAssetArray:(NSMutableArray *)selecteAssetsArray;
 

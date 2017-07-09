@@ -15,14 +15,15 @@
 		EF00F0AB1CCEFBA0001F26AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF00F0A91CCEFBA0001F26AD /* LaunchScreen.storyboard */; };
 		EF00F0B61CCEFBA0001F26AD /* ZGPhotoSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0B51CCEFBA0001F26AD /* ZGPhotoSelectTests.m */; };
 		EF00F0C11CCEFBA0001F26AD /* ZGPhotoSelectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0C01CCEFBA0001F26AD /* ZGPhotoSelectUITests.m */; };
-		EF00F0D61CCEFC2D001F26AD /* ZGPhotoCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D31CCEFC2D001F26AD /* ZGPhotoCycleController.m */; };
-		EF00F0D71CCEFC2D001F26AD /* ZGPhotosSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D51CCEFC2D001F26AD /* ZGPhotosSelectViewController.m */; };
-		EF00F0DA1CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0D91CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.m */; };
-		EF00F0DD1CCEFCEA001F26AD /* ZGAlassetLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0DC1CCEFCEA001F26AD /* ZGAlassetLibraryManager.m */; };
 		EF00F0E61CCEFDD5001F26AD /* UIColor+DHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */; };
 		EF00F0E91CCF00C6001F26AD /* UIImage+DHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */; };
 		EF0C2ED21CD0CAF30099CAAA /* ZGPhotoSelect.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF0C2ED11CD0CAF30099CAAA /* ZGPhotoSelect.gif */; };
-		EFCE2B3E1D1E1FFD00352D2B /* ZGPhotoPickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCE2B3D1D1E1FFD00352D2B /* ZGPhotoPickupController.m */; };
+		EF176B201F11C460008AE6C4 /* ZGPhotoCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B1B1F11C460008AE6C4 /* ZGPhotoCycleController.m */; };
+		EF176B211F11C460008AE6C4 /* ZGPhotoPickupController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B1D1F11C460008AE6C4 /* ZGPhotoPickupController.m */; };
+		EF176B221F11C460008AE6C4 /* ZGPhotosSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B1F1F11C460008AE6C4 /* ZGPhotosSelectViewController.m */; };
+		EF176B261F11C46A008AE6C4 /* ZGAlassetLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B251F11C46A008AE6C4 /* ZGAlassetLibraryManager.m */; };
+		EF176B2A1F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B291F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m */; };
+		EF176B2F1F11C4AA008AE6C4 /* ZGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,21 +60,23 @@
 		EF00F0BC1CCEFBA0001F26AD /* ZGPhotoSelectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGPhotoSelectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF00F0C01CCEFBA0001F26AD /* ZGPhotoSelectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoSelectUITests.m; sourceTree = "<group>"; };
 		EF00F0C21CCEFBA0001F26AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF00F0D21CCEFC2D001F26AD /* ZGPhotoCycleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoCycleController.h; sourceTree = "<group>"; };
-		EF00F0D31CCEFC2D001F26AD /* ZGPhotoCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoCycleController.m; sourceTree = "<group>"; };
-		EF00F0D41CCEFC2D001F26AD /* ZGPhotosSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotosSelectViewController.h; sourceTree = "<group>"; };
-		EF00F0D51CCEFC2D001F26AD /* ZGPhotosSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotosSelectViewController.m; sourceTree = "<group>"; };
-		EF00F0D81CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoCollectionViewCell.h; sourceTree = "<group>"; };
-		EF00F0D91CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoCollectionViewCell.m; sourceTree = "<group>"; };
-		EF00F0DB1CCEFCEA001F26AD /* ZGAlassetLibraryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGAlassetLibraryManager.h; sourceTree = "<group>"; };
-		EF00F0DC1CCEFCEA001F26AD /* ZGAlassetLibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGAlassetLibraryManager.m; sourceTree = "<group>"; };
 		EF00F0E41CCEFDD5001F26AD /* UIColor+DHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DHUtil.h"; sourceTree = "<group>"; };
 		EF00F0E51CCEFDD5001F26AD /* UIColor+DHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DHUtil.m"; sourceTree = "<group>"; };
 		EF00F0E71CCF00C6001F26AD /* UIImage+DHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DHUtil.h"; sourceTree = "<group>"; };
 		EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DHUtil.m"; sourceTree = "<group>"; };
 		EF0C2ED11CD0CAF30099CAAA /* ZGPhotoSelect.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGPhotoSelect.gif; sourceTree = "<group>"; };
-		EFCE2B3C1D1E1FFD00352D2B /* ZGPhotoPickupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoPickupController.h; sourceTree = "<group>"; };
-		EFCE2B3D1D1E1FFD00352D2B /* ZGPhotoPickupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoPickupController.m; sourceTree = "<group>"; };
+		EF176B1A1F11C460008AE6C4 /* ZGPhotoCycleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoCycleController.h; sourceTree = "<group>"; };
+		EF176B1B1F11C460008AE6C4 /* ZGPhotoCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoCycleController.m; sourceTree = "<group>"; };
+		EF176B1C1F11C460008AE6C4 /* ZGPhotoPickupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoPickupController.h; sourceTree = "<group>"; };
+		EF176B1D1F11C460008AE6C4 /* ZGPhotoPickupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoPickupController.m; sourceTree = "<group>"; };
+		EF176B1E1F11C460008AE6C4 /* ZGPhotosSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotosSelectViewController.h; sourceTree = "<group>"; };
+		EF176B1F1F11C460008AE6C4 /* ZGPhotosSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotosSelectViewController.m; sourceTree = "<group>"; };
+		EF176B241F11C46A008AE6C4 /* ZGAlassetLibraryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGAlassetLibraryManager.h; sourceTree = "<group>"; };
+		EF176B251F11C46A008AE6C4 /* ZGAlassetLibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGAlassetLibraryManager.m; sourceTree = "<group>"; };
+		EF176B281F11C472008AE6C4 /* ZGPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		EF176B291F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		EF176B2D1F11C4AA008AE6C4 /* ZGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGProgressHUD.h; sourceTree = "<group>"; };
+		EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 		EF00F09A1CCEFBA0001F26AD /* ZGPhotoSelect */ = {
 			isa = PBXGroup;
 			children = (
+				EF176B2B1F11C4AA008AE6C4 /* ZGProgressHUD */,
 				EF00F0CE1CCEFBCD001F26AD /* ZGPhotoSelect */,
 				EF00F09E1CCEFBA0001F26AD /* AppDelegate.h */,
 				EF00F09F1CCEFBA0001F26AD /* AppDelegate.m */,
@@ -168,43 +172,12 @@
 		EF00F0CE1CCEFBCD001F26AD /* ZGPhotoSelect */ = {
 			isa = PBXGroup;
 			children = (
+				EF176B271F11C472008AE6C4 /* View */,
+				EF176B231F11C46A008AE6C4 /* Model */,
+				EF176B191F11C460008AE6C4 /* Controller */,
 				EF00F0E31CCEFDAD001F26AD /* Category */,
-				EF00F0CF1CCEFBCD001F26AD /* Controller */,
-				EF00F0D01CCEFBCD001F26AD /* Model */,
-				EF00F0D11CCEFBCD001F26AD /* View */,
 			);
 			path = ZGPhotoSelect;
-			sourceTree = "<group>";
-		};
-		EF00F0CF1CCEFBCD001F26AD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EF00F0D21CCEFC2D001F26AD /* ZGPhotoCycleController.h */,
-				EF00F0D31CCEFC2D001F26AD /* ZGPhotoCycleController.m */,
-				EF00F0D41CCEFC2D001F26AD /* ZGPhotosSelectViewController.h */,
-				EF00F0D51CCEFC2D001F26AD /* ZGPhotosSelectViewController.m */,
-				EFCE2B3C1D1E1FFD00352D2B /* ZGPhotoPickupController.h */,
-				EFCE2B3D1D1E1FFD00352D2B /* ZGPhotoPickupController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EF00F0D01CCEFBCD001F26AD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EF00F0DB1CCEFCEA001F26AD /* ZGAlassetLibraryManager.h */,
-				EF00F0DC1CCEFCEA001F26AD /* ZGAlassetLibraryManager.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EF00F0D11CCEFBCD001F26AD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EF00F0D81CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.h */,
-				EF00F0D91CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EF00F0E31CCEFDAD001F26AD /* Category */ = {
@@ -216,6 +189,54 @@
 				EF00F0E81CCF00C6001F26AD /* UIImage+DHUtil.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		EF176B191F11C460008AE6C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF176B1A1F11C460008AE6C4 /* ZGPhotoCycleController.h */,
+				EF176B1B1F11C460008AE6C4 /* ZGPhotoCycleController.m */,
+				EF176B1C1F11C460008AE6C4 /* ZGPhotoPickupController.h */,
+				EF176B1D1F11C460008AE6C4 /* ZGPhotoPickupController.m */,
+				EF176B1E1F11C460008AE6C4 /* ZGPhotosSelectViewController.h */,
+				EF176B1F1F11C460008AE6C4 /* ZGPhotosSelectViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF176B231F11C46A008AE6C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF176B241F11C46A008AE6C4 /* ZGAlassetLibraryManager.h */,
+				EF176B251F11C46A008AE6C4 /* ZGAlassetLibraryManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF176B271F11C472008AE6C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF176B281F11C472008AE6C4 /* ZGPhotoCollectionViewCell.h */,
+				EF176B291F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF176B2B1F11C4AA008AE6C4 /* ZGProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EF176B2C1F11C4AA008AE6C4 /* View */,
+			);
+			path = ZGProgressHUD;
+			sourceTree = "<group>";
+		};
+		EF176B2C1F11C4AA008AE6C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF176B2D1F11C4AA008AE6C4 /* ZGProgressHUD.h */,
+				EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,14 +371,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF00F0A31CCEFBA0001F26AD /* ViewController.m in Sources */,
-				EFCE2B3E1D1E1FFD00352D2B /* ZGPhotoPickupController.m in Sources */,
 				EF00F0E91CCF00C6001F26AD /* UIImage+DHUtil.m in Sources */,
-				EF00F0D61CCEFC2D001F26AD /* ZGPhotoCycleController.m in Sources */,
+				EF176B211F11C460008AE6C4 /* ZGPhotoPickupController.m in Sources */,
+				EF176B261F11C46A008AE6C4 /* ZGAlassetLibraryManager.m in Sources */,
+				EF176B2A1F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m in Sources */,
+				EF176B2F1F11C4AA008AE6C4 /* ZGProgressHUD.m in Sources */,
 				EF00F0A01CCEFBA0001F26AD /* AppDelegate.m in Sources */,
-				EF00F0DA1CCEFCC4001F26AD /* ZGPhotoCollectionViewCell.m in Sources */,
-				EF00F0D71CCEFC2D001F26AD /* ZGPhotosSelectViewController.m in Sources */,
 				EF00F09D1CCEFBA0001F26AD /* main.m in Sources */,
-				EF00F0DD1CCEFCEA001F26AD /* ZGAlassetLibraryManager.m in Sources */,
+				EF176B201F11C460008AE6C4 /* ZGPhotoCycleController.m in Sources */,
+				EF176B221F11C460008AE6C4 /* ZGPhotosSelectViewController.m in Sources */,
 				EF00F0E61CCEFDD5001F26AD /* UIColor+DHUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
