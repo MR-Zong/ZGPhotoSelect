@@ -24,6 +24,7 @@
 		EF176B261F11C46A008AE6C4 /* ZGAlassetLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B251F11C46A008AE6C4 /* ZGAlassetLibraryManager.m */; };
 		EF176B2A1F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B291F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m */; };
 		EF176B2F1F11C4AA008AE6C4 /* ZGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */; };
+		EF176B311F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF176B301F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EF176B291F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		EF176B2D1F11C4AA008AE6C4 /* ZGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGProgressHUD.h; sourceTree = "<group>"; };
 		EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGProgressHUD.m; sourceTree = "<group>"; };
+		EF176B301F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZGPhotoSelectExample.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		EF00F09B1CCEFBA0001F26AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF176B301F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg */,
 				EF0C2ED11CD0CAF30099CAAA /* ZGPhotoSelect.gif */,
 				EF00F09C1CCEFBA0001F26AD /* main.m */,
 			);
@@ -306,6 +309,7 @@
 				TargetAttributes = {
 					EF00F0971CCEFB9F001F26AD = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9W8KXJ7KY8;
 					};
 					EF00F0B01CCEFBA0001F26AD = {
 						CreatedOnToolsVersion = 7.3;
@@ -342,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF176B311F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg in Resources */,
 				EF00F0AB1CCEFBA0001F26AD /* LaunchScreen.storyboard in Resources */,
 				EF00F0A81CCEFBA0001F26AD /* Assets.xcassets in Resources */,
 				EF0C2ED21CD0CAF30099CAAA /* ZGPhotoSelect.gif in Resources */,
@@ -523,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9W8KXJ7KY8;
 				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9W8KXJ7KY8;
 				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
