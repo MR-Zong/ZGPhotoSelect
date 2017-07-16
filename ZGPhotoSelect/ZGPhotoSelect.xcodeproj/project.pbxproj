@@ -25,6 +25,7 @@
 		EF176B2A1F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B291F11C472008AE6C4 /* ZGPhotoCollectionViewCell.m */; };
 		EF176B2F1F11C4AA008AE6C4 /* ZGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */; };
 		EF176B311F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF176B301F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg */; };
+		EFB518351F1B64FA00202E3E /* ZGPhotoSelectShow2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EFB518341F1B64FA00202E3E /* ZGPhotoSelectShow2.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EF176B2D1F11C4AA008AE6C4 /* ZGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGProgressHUD.h; sourceTree = "<group>"; };
 		EF176B2E1F11C4AA008AE6C4 /* ZGProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGProgressHUD.m; sourceTree = "<group>"; };
 		EF176B301F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZGPhotoSelectExample.jpeg; sourceTree = "<group>"; };
+		EFB518341F1B64FA00202E3E /* ZGPhotoSelectShow2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZGPhotoSelectShow2.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		EF00F09B1CCEFBA0001F26AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFB518341F1B64FA00202E3E /* ZGPhotoSelectShow2.jpeg */,
 				EF176B301F11CBDA008AE6C4 /* ZGPhotoSelectExample.jpeg */,
 				EF0C2ED11CD0CAF30099CAAA /* ZGPhotoSelect.gif */,
 				EF00F09C1CCEFBA0001F26AD /* main.m */,
@@ -351,6 +354,7 @@
 				EF00F0A81CCEFBA0001F26AD /* Assets.xcassets in Resources */,
 				EF0C2ED21CD0CAF30099CAAA /* ZGPhotoSelect.gif in Resources */,
 				EF00F0A61CCEFBA0001F26AD /* Main.storyboard in Resources */,
+				EFB518351F1B64FA00202E3E /* ZGPhotoSelectShow2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +536,7 @@
 				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kk.hongnishuitest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -545,7 +549,7 @@
 				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kk.hongnishuitest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
