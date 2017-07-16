@@ -536,7 +536,7 @@
 				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kk.hongnishuitest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -549,7 +549,7 @@
 				INFOPLIST_FILE = ZGPhotoSelect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kk.hongnishuitest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGPhotoSelect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
