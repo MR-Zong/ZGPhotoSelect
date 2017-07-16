@@ -135,7 +135,7 @@
 #pragma mark - exampleButtonClick
 - (void)exampleButtonClick:(UIButton *)btn
 {
-    [self example2];
+    [self example1];
 }
 
 - (void)example1
