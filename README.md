@@ -6,7 +6,7 @@
   .1,普通拍照
   .2,身份证这些卡类不同样式效果）
 # 拍身份证卡类效果
-![ZGPhotoSelect效果展示](https://github.com/MR-Zong/ZGPhotoSelect/blob/master/ZGPhotoSelect/ZGPhotoSelect/ZGPhotoSelectExample.jpeg)
+![ZGPhotoSelect效果展示](https://github.com/MR-Zong/ZGPhotoSelect/blob/master/ZGPhotoSelect/ZGPhotoSelect/ZGPhotoSelectShow2.jpeg)
 
 #相册
 ![ZGPhotoSelect效果展示](https://github.com/MR-Zong/ZGPhotoSelect/blob/master/ZGPhotoSelect/ZGPhotoSelect/ZGPhotoSelect.gif)
