@@ -11,7 +11,11 @@
 #import "UIImage+DHUtil.h"
 
 @interface MYQPhotoGraphFillColorView : UIView
+
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, assign) CGRect clipRect;
+@property (nonatomic, assign) CGFloat cornerRadius;
+
 - (void)clipWithRect:(CGRect)rect;
 - (void)setMaskLayerWithView:(UIView *)view maskRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
 - (void)bezierMaskLayerWithView:(UIView *)view maskRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
@@ -23,11 +27,35 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        _imageView = [[UIImageView alloc] initWithFrame:frame];
-        _imageView.image = [UIImage imageFromColor:[[UIColor whiteColor] colorWithAlphaComponent:0.3] size:frame.size];
-        [self addSubview:_imageView];
+//        _imageView = [[UIImageView alloc] initWithFrame:frame];
+//        _imageView.image = [UIImage imageFromColor:[[UIColor whiteColor] colorWithAlphaComponent:0.3] size:frame.size];
+//        [self addSubview:_imageView];
+        self.opaque = NO;
     }
     return self;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGPathRef totalPath = CGPathCreateWithRect(rect, NULL);
+    CGContextAddPath(context, totalPath);
+    
+    //使用rgb颜色空间
+//    CGColorSpaceRef colorSpace=CGColorSpaceCreateDeviceRGB();
+    
+//    CGContextSetFillColorWithColor(context, [[UIColor clearColor] colorWithAlphaComponent:0.3].CGColor);
+//    CGContextFillPath(context);
+    
+    CGPathRef clipPath = CGPathCreateWithRoundedRect(self.clipRect, self.cornerRadius, self.cornerRadius, NULL);
+    CGContextAddPath(context, clipPath);
+    CGContextSetFillColorWithColor(context, [[UIColor whiteColor] colorWithAlphaComponent:0.3].CGColor);
+    CGContextEOFillPath(context);
+
+    CGPathRelease(clipPath);
+    CGContextRelease(context);
+    
 }
 
 - (void)clipWithRect:(CGRect)rect
@@ -135,7 +163,7 @@
 #pragma mark - exampleButtonClick
 - (void)exampleButtonClick:(UIButton *)btn
 {
-    [self example1];
+    [self example2];
 }
 
 - (void)example1
@@ -164,7 +192,9 @@
     MYQPhotoGraphFillColorView *bgColorView = [[MYQPhotoGraphFillColorView alloc] initWithFrame:overlayView.bounds];
     //        [bgColorView clipWithRect:idCardBorderImgViewFrame];
     //        [bgColorView setMaskLayerWithView:bgColorView maskRect:idCardBorderImgViewFrame cornerRadius:15.f];
-    [bgColorView bezierMaskLayerWithView:bgColorView maskRect:idCardBorderImgViewFrame cornerRadius:15.f];
+//    [bgColorView bezierMaskLayerWithView:bgColorView maskRect:idCardBorderImgViewFrame cornerRadius:15.f];
+    bgColorView.clipRect = idCardBorderImgViewFrame;
+    bgColorView.cornerRadius = 15.f;
     [overlayView addSubview:bgColorView];
     
     
